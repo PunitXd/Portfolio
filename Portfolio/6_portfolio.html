@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Punit Singh | Portfolio</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #c5c5c5;
+            background-color: #ffffff;
+        }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #222;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+        }
+
+        nav a:hover {
+            color: #ff6347;
+        }
+        header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        .intro {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url("img/abstract-ai-circuit-board-background-600nw-2471339475.webp") no-repeat center center/cover;
+            text-align: center;
+            padding: 0 2rem;
+        }
+        .intro h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            color: #ffffff;
+        }
+        .intro p {
+            font-size: 1.5rem;
+            margin: 1rem 0;
+            color: #ddd;
+        }
+        .intro .btn {
+            background-color: #ff6347;
+            color: #fff;
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .intro .btn:hover {
+            background-color: #ff4500;
+        }
+        .about-me {
+            max-width: 1000px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 20px;
+        }
+        .about-me p{
+            color: #6b6666;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            gap: 30px;
+        }
+        .profile-img {
+            width: 400px;
+            height: 175px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #e0e0e0;
+        }
+        .skills{
+            text-align: center;
+            margin: 40px auto;
+            max-width: 1200px;
+            padding: 20px;
+        }
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .skills-card {
+            background: #fff;
+            box-shadow: 0 16px 24px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            width: 320px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .skills-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skills-card h3 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        .skills-card p {
+            font-size: 1rem;
+            line-height: 1.4;
+            color: #666;
+        }
+        .about-text{
+            font-size: 1.25rem;
+        }
+        section {
+            padding: 2rem 0;
+            text-align: center;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #5c5c5c;
+            margin-bottom: 20px;
+        }
+        .contact-container{
+            text-align: left;
+            background-color: #222;
+            padding: 20px 40px;
+        }
+        .contact-container h2 {
+            margin-bottom: 20px;
+            color: #837f7f;
+            font-size: 2rem;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .projects{
+            padding:50px;
+        }
+        form input,
+        form textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-bottom: 3px solid #444;
+            background-color: #fff;
+            color: #333;
+            font-size: 1rem;
+            border-radius: 5px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        form input:focus,
+        form textarea:focus {
+            border-bottom: 3px solid #ff7b54;
+        }
+
+        form button {
+            background-color: #ff7b54;
+            color: #fff;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 150px;
+            transition: background-color 0.3s ease;
+        }
+
+        form button:hover {
+            background-color: #ff5a32;
+        }
+
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
+        footer a {
+            color: #ff6347;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        img{
+            height:50px;
+            width:50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Punit Singh</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="intro">
+        <h1>Hi, I'm Punit Singh</h1>
+        <p>A passionate BTech CSE student who loves coding and building cool stuff.</p>
+        <a href="#contact"><button class="btn">Let’s Connect!</button></a>
+    </div>
+ <section id="about">
+    <div class="about-me">
+        <h2>About Me</h2>
+        <div class="container">
+            <img src="imagess/IMG_2017.JPG" class="profile-img">
+            <div class="about-text">
+            <p>Hello, I am a BTech CSE student with a strong passion for technology at KIET group of institutions. I enjoy working on web development, programming and problem-solving. I am always looking to learn new things and enhance my skills.</p>
+            </div>
+        </div>
+    </div>
+    </section>
+        <section id="skills">
+            <div class="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <div class="skills-card">
+                    <h3>Programming</h3>
+                    <p>C programming, Java, C++</p>
+                </div>
+                <div class="skills-card">
+                    <h3>Web development</h3>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skills-card">
+                    <h3>Tools</h3>
+                    <p>Git, Github, VS code</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="projects">
+            <div class="projects">
+            <h2>Projects</h2>
+            <div class="skills-container">
+                <div class="skills-card">
+                    <h3>Project 1</h3>
+                    <p>A portfolio project using HTML, CSS and JavaScript.</p>
+                </div>
+                <div class="skills-card">
+                    <h3>Project 2</h3>
+                    <p>A cloth and shoes rental website.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <section id="contact">
+            <div class="contact-container">
+            <h2>Contact Me</h2>
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Your Message" rows="5" required></textarea>
+                <button type="submit">Send Message</button>
+                <div class="img">
+                    <a href="https://www.instagram.com/_.punit_singh._/">
+                    <img src="imagess/insta.png">
+                    </a>
+                    <a href="https://www.linkedin.com/in/punit-singh-385a35328/">
+                    <img src="imagess/linkedin.png">
+                    </a>
+                </div>
+            </form>
+        </section>
+
+    <footer>
+        <p>&copy; 2024 Punit Singh. All rights reserved.</p>
+    </footer>
+</body>
+</html>
